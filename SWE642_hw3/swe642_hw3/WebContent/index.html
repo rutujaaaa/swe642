@@ -1,0 +1,155 @@
+<!-- Presentation Logic 
+Index page. A JSP page to fill out the form
+ -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+</script>
+</head>
+
+<body>
+	<form name="surveyForm" autocomplete="on" action="TestServelet"
+		method="post" onsubmit='return checkFieldsValidity();'>
+		<div class="contact-form">
+			<h1>Let Us Know</h1>
+			<div align='right'>
+				<label>Date</label> <input id="today" type="date">
+			</div>
+			<div class="txtb">
+				<label>Full Name :</label> <input type="text" name="FullName"
+					id="FullName" value="" placeholder="Enter Your Name" autofocus
+					required>
+			</div>
+
+			<div class="txtb">
+				<label>Student ID :</label> <input type="text" name="StudentID"
+					id="StudentID" value="" placeholder="Enter Your Student ID">
+			</div>
+
+			<div class="txtb">
+				<label>Email :</label> <input type="email" name="e" id="e"
+					value="" placeholder="abc@xyz.com" required>
+			</div>
+
+			<div class="txtb">
+				<label>Phone Number :</label> <input type="text" name="p"
+					id="p" value="" placeholder="Enter Your Phone Number" required>
+			</div>
+			<div class="txtb">
+				<label>URL :</label> <input type="text" name="u" id="u" value=""
+					placeholder="Enter URL">
+			</div>
+			<div class="txtb">
+				<label>Address :</label> <input type="text" name="a"
+					id="a" value="" placeholder="Enter Your Street Address">
+			</div>
+			<div class="txtb">
+				<label>Zip Code : <span id="InvalidZip"
+					style="display: none;">Invalid Zip</span></label> <input type="text"
+					name="z" id="z" value="" onblur="ShowCityState()">
+			</div>
+			<div class="txtb">
+				<label>City :</label> <input type="text" name="City" id="CityBx"
+					value="">
+			</div>
+			<div class="txtb">
+				<label>State :</label> <input type="text" name="State" id="StateBx"
+					value="">
+			</div>
+
+			<table>
+				<tr>
+					<td>What did you like about GMU ?</td>
+					<td><input type="checkbox" id="chkbx" name="opt-1"
+						value="Students"> <label for="opt-1">Students</label> <input
+						type="checkbox" id="chkbx" name="opt-2" value="Location">
+						<label for="opt-2">Location</label> <br> <input
+						type="checkbox" id="chkbx" name="opt-3" value="Campus"> <label
+						for="opt-3">Campus</label> <input type="checkbox" id="chkbx"
+						name="opt-4" value="Atmosphere"> <label for="opt-4">Atmosphere</label><br>
+						<input type="checkbox" id="chkbx" name="opt-5" value="Dorm Rooms">
+						<label for="opt-5">Dorm Rooms</label> <input type="checkbox"
+						id="chkbx" name="opt-6" value="Sports"> <label for="opt-6">Sports</label>
+						<br></td>
+				</tr>
+				<tr>
+					<br>
+					<br>
+					<td>How did you become interested in GMU ?</td>
+					<td><input type="radio" name="Interest" value="Friends">
+						Friends <input type="radio" name="Interest" value="Television">
+						Television<br> <input type="radio" name="Interest"
+						value="Internert"> Internet <input type="radio"
+						name="Interest" value="Other"> Other</td>
+			</table>
+			<br>
+
+			<div class="dropdown1">
+				High School Graduation Date:<br> <label>Month: <select
+					name="Month">
+						<option>-- select --</option>
+						<option value="January">Jan</option>
+						<option value="February">Feb</option>
+						<option value="March">Mar</option>
+						<option value="April">Apr</option>
+						<option value="May">May</option>
+						<option value="June">Jun</option>
+						<option value="July">Jul</option>
+						<option value="August">Aug</option>
+						<option value="September">Sep</option>
+						<option value="October">Oct</option>
+						<option value="November">Nov</option>
+						<option value="December">Dec</option>
+
+				</select>
+				</label> <span> Year: <input type="text" name="GradYear" value="">
+				</span>
+			</div>
+			<br>
+			<div class="dropdown2">
+				How likely would you recommend GMU to others? <select
+					name="Likelyhood">
+					<option value="Very Likely" selected>Very Likely</option>
+					<option value="Likely">Likely</option>
+					<option value="Unlikely">Unlikely</option>
+				</select>
+			</div>
+			<div class="txtb">
+				<label>Comments :</label>
+				<textarea name="c" id="c" value=""></textarea>
+			</div>
+			<div class="txtb">
+				<label>Data:<span id="avgMaxerrMsg"
+					style="display: block; text-align: right; color: #FF0000"></span></label> <input
+					type="text" name="Data" value=""
+					placeholder="Enter 10 numbers between 1-100" required>
+			</div>
+			<button type="reset" class="btn" value="Reset"
+				style="width: 40%; position: absolute; left: 8%;">Reset</button>
+			<input type="submit" class="btn" value="Submit"
+				style="width: 40%; position: absolute; right: 8%;">
+
+		</div>
+
+
+	</form>
+	<div id="dialog"></div>
+	<div class="logo">
+		<a href="https://cs.gmu.edu/" class="tooltip"> <img
+			src="University_logo.svg.png" alt="George Mason University"
+			style="width: 150px; height: 100px; border: 0;"><span
+			class="tooltiptext">Please visit http://www.gmu.edu for more
+				information.</span>
+		</a>
+	</div>
+
+</body>
+
+</html>
