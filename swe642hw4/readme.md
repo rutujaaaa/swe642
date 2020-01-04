@@ -4,13 +4,9 @@
 The 4th assignment consists of a survey form for the student to fill where the front end should be developed
 using angular and backend should be developed using jpa services
 
-—For further details about the page click on the below link—
-
-http://localhost:4200/survey
-
 —files included in this project—
 
-swe642-hw4.war, readme.md, swe642.zip (all html source files)
+swe642-hw4.war, readme.md, all html source files
 
 --Installation--
 
