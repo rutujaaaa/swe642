@@ -2,7 +2,7 @@
 — README.MD—
 
 The 4th assignment consists of a survey form for the student to fill where the front end should be developed
-using angular and backend should be developed using jpa services
+using angular and backend should be developed using jpa services and RESTFul web service. 
 
 —files included in this project—
 
